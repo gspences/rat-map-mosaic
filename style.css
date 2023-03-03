@@ -1,5 +1,5 @@
 .wrapper .imgwrapper .subwrapper{
-    display: flex;  
+    display: grid;  
     flex-flow: row wrap;
     font-weight: bold;
     text-align: center; 
@@ -7,10 +7,31 @@
 
 .imgwrapper {
   justify-content: center;
+  position: relative;
 }
 
-.subwrapper {
-  justify-content: center;
+.imgback {
+  z-index: -10;
+  position: absolute;
+}
+
+.gridfront {
+  z-index: 10;
+  position: absolute;
+  border-collapse: collapse;
+  border: 1px solid;
+  width: auto;
+  height: auto;
+  table-layout: fixed;
+  /* background-image: url(images/bookshelf.jpg);
+  background-size: contain; */
+}
+
+.tablecell {
+  height: 20px;
+  width: 20px;
+  border-collapse: collapse;
+  border: 1px solid;
 }
 
 .main {
